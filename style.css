@@ -1,0 +1,32 @@
+.flower {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.petal {
+  position: absolute;
+  background-color: #ff9900; /* Orange color */
+  width: 50px;
+  height: 80px;
+  border-radius: 50%;
+  animation: flicker 1s ease-in-out infinite alternate; 
+}
+
+.center {
+  width: 40px;
+  height: 40px;
+  background-color: #ffcc00; /* Yellow color */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* More petal position adjustments here */
+
+@keyframes flicker {
+  from { opacity: 1; }
+  to { opacity: 0.6; transform: scale(0.95); }
+}
