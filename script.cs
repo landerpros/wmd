@@ -1,10 +1,12 @@
-const petals = document.querySelectorAll('.petal');
+const flower = document.querySelector('.flower');
 
-function randomizeFlicker() {
-  petals.forEach(petal => {
-    let randomDelay = Math.random() * 0.5; // Up to 0.5s delay
-    petal.style.animationDelay = `${randomDelay}s`;
-  });
+for (let i = 0; i < 10; i++) {
+  const petal = document.createElement('div');
+  petal.classList.add('petal');
+  petal.style.transform = `rotate(${i * 36}deg)`;
+  flower.appendChild(petal);
 }
 
-setInterval(randomizeFlicker, 2000); // Change flicker pattern every 2s
+const pistil = document.createElement('div');
+pistil.classList.add('pistil');
+flower.appendChild(pistil);
